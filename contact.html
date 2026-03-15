@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — HeLT Consulting</title>
+  <meta name="description" content="Get in touch with HeLT Consulting. Schedule a consultation about branding, marketing strategy, or publishing consulting.">
+  <meta property="og:title" content="Contact — HeLT Consulting">
+  <meta property="og:description" content="Ready to tell your story? Let's start the conversation.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/chicago_skyline.jpg">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="HeLT Consulting Home">
+        <img src="assets/img/brand_logo.png" alt="HeLT Consulting logo" width="160" height="42">
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="index.html">Home</a></li>
+          <li><a class="main-nav__link" href="services.html">Services</a></li>
+          <li><a class="main-nav__link" href="about.html">About</a></li>
+          <li><a class="main-nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow" style="color:var(--clr-green-light);">Contact Us</span>
+        <h1>Let's Start a Conversation</h1>
+        <p>Whether you have a clear project in mind or just want to explore possibilities, we'd love to hear from you.</p>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT FORM + INFO ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- Form -->
+          <div>
+            <!--
+              =============================================
+              TO WIRE UP A REAL FORM BACKEND:
+
+              Option A — Formspree:
+                Change the <form> tag to:
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                Remove the JS-based submit handler or keep it for UX.
+
+              Option B — Netlify Forms:
+                Add netlify attribute:
+                <form name="contact" method="POST" data-netlify="true">
+                Add a hidden input:
+                <input type="hidden" name="form-name" value="contact">
+
+              Option C — Custom endpoint:
+                Use fetch() in main.js to POST JSON to your API.
+              =============================================
+            -->
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name">Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name">
+                <p class="error-msg" role="alert">Please enter your name.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+                <p class="error-msg" role="alert">Please enter a valid email address.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="company">Company / Organization</label>
+                <input type="text" id="company" name="company" autocomplete="organization" placeholder="Optional">
+              </div>
+
+              <div class="form-group">
+                <label for="interest">Interested In <span aria-hidden="true">*</span></label>
+                <select id="interest" name="interest" required>
+                  <option value="">Select one…</option>
+                  <option value="branding">Branding &amp; Positioning</option>
+                  <option value="research">Market Research &amp; Strategy</option>
+                  <option value="marketing">Marketing Campaigns &amp; Content</option>
+                  <option value="publishing">Publishing &amp; Author Consulting</option>
+                  <option value="general">General Inquiry</option>
+                </select>
+                <p class="error-msg" role="alert">Please select an area of interest.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" required placeholder="Tell us a bit about your project or question…"></textarea>
+                <p class="error-msg" role="alert">Please enter a message.</p>
+              </div>
+
+              <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;">Send Message</button>
+              <p style="margin-top:var(--sp-md); font-size:var(--fs-xs); color:var(--clr-text-light); text-align:center;">
+                Or email us directly at
+                <a href="mailto:hello@helt-consulting.com">hello@helt-consulting.com</a>
+              </p>
+            </form>
+
+            <!-- Success state -->
+            <div id="form-success" class="form-success">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--clr-green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto var(--sp-md);display:block;">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              <h3>Thank you!</h3>
+              <p style="color:var(--clr-text-light);">Your message has been received. We'll be in touch within one business day.</p>
+              <p style="margin-top:var(--sp-md); font-size:var(--fs-small); color:var(--clr-mid-gray);">
+                If you need an immediate response, please email
+                <a href="mailto:hello@helt-consulting.com">hello@helt-consulting.com</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact info sidebar -->
+          <div class="contact-info">
+            <h3>Get in Touch</h3>
+
+            <div class="contact-info__item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:hello@helt-consulting.com">hello@helt-consulting.com</a>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+17733877416">(773) 387-7416</a>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <strong>Location</strong>
+                <span>Chicago, IL 60618</span>
+              </div>
+            </div>
+
+            <!-- Map placeholder -->
+            <div class="map-placeholder">
+              <div>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto var(--sp-sm);display:block;opacity:.5;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Map embed placeholder<br>
+                <span style="font-size:var(--fs-xs);">Replace with Google Maps or Mapbox iframe</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BAND ===== -->
+    <section class="cta-band">
+      <div class="container">
+        <h2>Prefer to schedule directly?</h2>
+        <p>Book a free 30-minute introductory call and we'll figure out the best way to help.</p>
+        <a href="mailto:hello@helt-consulting.com?subject=Consultation%20Request" class="btn btn--primary">Email to Schedule</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/brand_logo.png" alt="HeLT Consulting">
+          <p>Chicago-based branding, marketing, and publishing consultants helping organizations and authors tell stories that matter.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/heiditoboni" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 013.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 11-.01-4.13 2.06 2.06 0 01.01 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77A1.75 1.75 0 000 1.73v20.54A1.75 1.75 0 001.77 24h20.45A1.76 1.76 0 0024 22.27V1.73A1.76 1.76 0 0022.22 0z"/></svg></a>
+            <a href="https://x.com/hltoboni" target="_blank" rel="noopener" aria-label="Twitter / X"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.24 5.37h2.9l-6.33 7.24L22 18.63h-5.83l-4.57-5.97-5.23 5.97H3.46l6.77-7.74L3 5.37h5.98l4.13 5.46 4.77-5.46h.36zM17.18 17.27h1.6L7.87 7h-1.72l11.03 10.27z"/></svg></a>
+            <a href="https://www.facebook.com/heidi.toboni/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8v8.44C19.61 23.08 24 18.09 24 12.07z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#branding">Brand Strategy &amp; Positioning</a></li>
+            <li><a href="services.html#content">Content Marketing</a></li>
+            <li><a href="services.html#marketing">Marketing Campaigns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in Touch</h4>
+          <ul class="footer-links">
+            <li>hello@helt-consulting.com</li>
+            <li>(773) 387-7416</li>
+            <li>Chicago, IL 60618</li>
+          </ul>
+          <a href="contact.html" class="btn btn--primary btn--small" style="margin-top:var(--sp-md);">Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2024 HeLT Consulting. All rights reserved.</span>
+        <span>Crafted with care in Chicago.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
